@@ -16,7 +16,7 @@ const Pollpage = () => {
         try {
             (async () => {
                 let response = await fetch(
-                    `http://localhost:5004/common/poll/${pollId}`,
+                    `https://pollportal-server.onrender.com/common/poll/${pollId}`,
                     { credentials: "include" }
                 );
 
@@ -34,7 +34,7 @@ const Pollpage = () => {
                         return;
                     } else {
                         response = await fetch(
-                            `http://localhost:5004/poll/${pollId}/resultAvailable`,
+                            `https://pollportal-server.onrender.com/poll/${pollId}/resultAvailable`,
                             { credentials: "include" }
                         );
 
@@ -65,7 +65,7 @@ const Pollpage = () => {
             const formData = { option_id: selectedId };
             setLoading(true);
             const response = await fetch(
-                `http://localhost:5004/poll/${pollId}/vote`,
+                `https://pollportal-server.onrender.com/poll/${pollId}/vote`,
                 {
                     method: "POST",
                     credentials: "include",

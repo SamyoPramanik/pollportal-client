@@ -15,7 +15,7 @@ const NewModerator = ({ setVisibility, pollId, getModerators }) => {
         (async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:5004/poll/${pollId}/searchUser?q=${serachQuery}`,
+                    `https://pollportal-server.onrender.com/poll/${pollId}/searchUser?q=${serachQuery}`,
                     {
                         credentials: "include",
                     }
@@ -37,7 +37,7 @@ const NewModerator = ({ setVisibility, pollId, getModerators }) => {
     const addModerator = async (id) => {
         try {
             const response = await fetch(
-                `http://localhost:5004/poll/${pollId}/add-moderator/${id}`,
+                `https://pollportal-server.onrender.com/poll/${pollId}/add-moderator/${id}`,
                 { credentials: "include" }
             );
             if (response.status == 200) {

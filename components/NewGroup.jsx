@@ -25,7 +25,7 @@ const NewGroup = ({ setVisibility, pollId, getGroups }) => {
         try {
             setLoading(false);
             const response = await fetch(
-                `http://localhost:5004/poll/${pollId}/add-group`,
+                `https://pollportal-server.onrender.com/poll/${pollId}/add-group`,
                 {
                     method: "POST",
                     credentials: "include",

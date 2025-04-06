@@ -24,7 +24,7 @@ const OtpVerifcationPage = () => {
         try {
             setLoading(false);
             const response = await fetch(
-                `http://localhost:5004/auth/verify-otp`,
+                `https://pollportal-server.onrender.com/auth/verify-otp`,
                 {
                     method: "POST",
                     credentials: "include",

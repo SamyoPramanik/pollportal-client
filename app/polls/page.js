@@ -10,7 +10,7 @@ const Pollspage = () => {
         try {
             (async () => {
                 const response = await fetch(
-                    `http://localhost:5004/common/polls`,
+                    `https://pollportal-server.onrender.com/common/polls`,
                     {
                         credentials: "include",
                     }

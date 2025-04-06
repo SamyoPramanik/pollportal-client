@@ -22,7 +22,7 @@ const NewOption = ({ setVisibility, pollId, getOptions }) => {
         try {
             setLoading(false);
             const response = await fetch(
-                `http://localhost:5004/poll/${pollId}/add-option`,
+                `https://pollportal-server.onrender.com/poll/${pollId}/add-option`,
                 {
                     method: "POST",
                     credentials: "include",

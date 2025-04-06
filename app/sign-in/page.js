@@ -23,12 +23,15 @@ const SignInPage = () => {
         e.preventDefault();
         try {
             setLoading(false);
-            const response = await fetch(`http://localhost:5004/auth/sign-in`, {
-                method: "POST",
-                credentials: "include",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
+            const response = await fetch(
+                `https://pollportal-server.onrender.com/auth/sign-in`,
+                {
+                    method: "POST",
+                    credentials: "include",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData),
+                }
+            );
             if (response?.status == 200) {
                 toast.info(`Welcome`, {
                     theme: "colored",
@@ -36,7 +39,7 @@ const SignInPage = () => {
                 });
 
                 const response = await fetch(
-                    `http://localhost:5004/auth/profile`,
+                    `https://pollportal-server.onrender.com/auth/profile`,
                     { credentials: "include" }
                 );
 

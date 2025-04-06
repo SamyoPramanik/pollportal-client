@@ -18,7 +18,7 @@ const NavBar = () => {
             (async () => {
                 try {
                     const response = await fetch(
-                        "http://localhost:5004/auth/profile",
+                        "https://pollportal-server.onrender.com/auth/profile",
                         {
                             credentials: "include",
                             cache: "no-store",
@@ -43,7 +43,7 @@ const NavBar = () => {
         }
     }, []);
     const signOut = async () => {
-        await fetch(`http://localhost:5004/auth/sign-out`, {
+        await fetch(`https://pollportal-server.onrender.com/auth/sign-out`, {
             credentials: "include",
         });
         setSignedIn(false);

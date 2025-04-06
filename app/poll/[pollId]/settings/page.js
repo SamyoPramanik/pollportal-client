@@ -22,7 +22,7 @@ const PollSettingsPage = () => {
     useEffect(() => {
         (async () => {
             const response = await fetch(
-                `http://localhost:5004/poll/${pollId}`,
+                `https://pollportal-server.onrender.com/poll/${pollId}`,
                 { credentials: "include" }
             );
             const data = await response.json();
@@ -48,7 +48,7 @@ const PollSettingsPage = () => {
             try {
                 setLoading(false);
                 const response = await fetch(
-                    `http://localhost:5004/poll/${pollId}/delete`,
+                    `https://pollportal-server.onrender.com/poll/${pollId}/delete`,
                     {
                         credentials: "include",
                         headers: { "Content-Type": "application/json" },
@@ -88,7 +88,7 @@ const PollSettingsPage = () => {
         try {
             setLoading(false);
             const response = await fetch(
-                `http://localhost:5004/poll/${pollId}/update`,
+                `https://pollportal-server.onrender.com/poll/${pollId}/update`,
                 {
                     method: "POST",
                     credentials: "include",

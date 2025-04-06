@@ -28,13 +28,16 @@ const SignUpPage = () => {
         e.preventDefault();
         try {
             setLoading(false);
-            const response = await fetch(`http://localhost:5004/auth/sign-up`, {
-                method: "POST",
-                credentials: "include",
-                headers: { "Content-Type": "application/json" },
+            const response = await fetch(
+                `https://pollportal-server.onrender.com/auth/sign-up`,
+                {
+                    method: "POST",
+                    credentials: "include",
+                    headers: { "Content-Type": "application/json" },
 
-                body: JSON.stringify(formData),
-            });
+                    body: JSON.stringify(formData),
+                }
+            );
             if (response.status == 200) {
                 toast.info("Sign Up successful. Sign in to your account", {
                     theme: "colored",

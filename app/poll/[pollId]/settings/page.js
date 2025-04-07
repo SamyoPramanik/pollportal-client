@@ -46,7 +46,7 @@ const PollSettingsPage = () => {
 
         if (sureToDelete == true) {
             try {
-                setLoading(false);
+                setLoading(true);
                 const response = await fetch(
                     `https://pollportal-server.onrender.com/poll/${pollId}/delete`,
                     {
@@ -86,7 +86,7 @@ const PollSettingsPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            setLoading(false);
+            setLoading(true);
             const response = await fetch(
                 `https://pollportal-server.onrender.com/poll/${pollId}/update`,
                 {

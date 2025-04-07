@@ -23,7 +23,7 @@ const NewGroup = ({ setVisibility, pollId, getGroups }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            setLoading(false);
+            setLoading(true);
             const response = await fetch(
                 `https://pollportal-server.onrender.com/poll/${pollId}/add-group`,
                 {

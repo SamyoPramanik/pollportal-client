@@ -28,7 +28,7 @@ const NewPoll = ({ setVisibility }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            setLoading(false);
+            setLoading(true);
             const response = await fetch(
                 `https://pollportal-server.onrender.com/common/poll/create`,
                 {
